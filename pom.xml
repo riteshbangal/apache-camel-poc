@@ -14,6 +14,10 @@
 		<module>camel-java-dsl</module>
 		<module>springboot-camel</module>
 		<module>camel-activemq-dsl</module>
+		<module>camel-spring</module>
+		<module>camel-load-balancer</module>
+		
+		<module>camel-jaxrs</module>
 	</modules>
 	
 </project>
