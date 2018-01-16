@@ -17,6 +17,7 @@
 		<module>camel-spring</module>
 		<module>camel-load-balancer</module>
 		<module>camel-email-poc</module>
+		<module>camel-rest-consumer</module>
 		
 		<module>camel-jaxrs</module>
 	</modules>

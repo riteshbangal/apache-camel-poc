@@ -26,9 +26,9 @@ public class SimpleRouteBuilder extends RouteBuilder {
 				}
 			})
 			.setHeader("To", simple("rbangal@sapient.com")).setHeader("From", simple("no-reply@elasticpath.com"))
-			.setHeader("Subject", simple("Camel Import Exception")).setBody(simple("The Camel Import failed while processing file"))
+			.setHeader("Subject", simple("Camel Import POC")).setBody(simple("The Camel Import failed while processing file"))
 			//.process(fileAttachmentProcessor)
-		.to("smtp://" + "localhost:25");
+		.to("smtp://" + "http://localhost:25");
     }
 
 }
