@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<?xml-stylesheet type="text/xsl" href="catalog.xsl"?>
+<rentalProperties>
+	<property contact="1">
+		<proptype>House</proptype>
+		<price>420</price>
+		<address>
+			<streetNo>1</streetNo>
+			<street>Wavell Street</street>
+			<suburb>Box Hill</suburb>
+			<state>VIC</state>
+			<zipcode>3128</zipcode>
+		</address>
+		<numberOfBedrooms>3</numberOfBedrooms>
+		<numberOfBathrooms>1</numberOfBathrooms>
+		<garage>1</garage>
+	</property>
+</rentalProperties>
