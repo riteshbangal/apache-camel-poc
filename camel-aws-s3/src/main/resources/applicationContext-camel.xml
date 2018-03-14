@@ -15,12 +15,12 @@
 	
 	<!-- set up default amazon s3 client from amazon aws sdk -->
 	<bean id="s3Client" class="com.amazonaws.services.s3.AmazonS3Client">
-		<constructor-arg>
+		<!-- <constructor-arg>
 			<bean class="com.amazonaws.auth.BasicAWSCredentials">
-				<constructor-arg name="accessKey" value="AKIAIGHOC2QKWSYA5M2A"/>
-				<constructor-arg name="secretKey" value="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"/>
+				<constructor-arg name="accessKey" value=""/>
+				<constructor-arg name="secretKey" value=""/>
 			</bean>
-		</constructor-arg>
+		</constructor-arg> -->
 	</bean>
 	
 </beans>
