@@ -1,0 +1,3 @@
+# To run this maven project from command prompt.
+mvn clean package/install
+mvn exec:java
