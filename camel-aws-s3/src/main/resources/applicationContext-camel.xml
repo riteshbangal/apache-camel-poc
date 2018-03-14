@@ -5,9 +5,22 @@
 		http://camel.apache.org/schema/spring 
 		http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-	<bean id="routeBuilder" class="com.javainuse.route.SimpleRouteBuilder" />
+	<bean id="simpleRouteBuilder" class="com.poc.camel.aws.route.SimpleRouteBuilder" />
+	<bean id="awsS3RouteBuilder" class="com.poc.camel.aws.route.AwsS3RouteBuilder" />
 
 	<camelContext xmlns="http://camel.apache.org/schema/spring">
-		<routeBuilder ref="routeBuilder" />
+		<!-- <routeBuilder ref="simpleRouteBuilder" /> -->
+		<routeBuilder ref="awsS3RouteBuilder" />
 	</camelContext>
+	
+	<!-- set up default amazon s3 client from amazon aws sdk -->
+	<bean id="s3Client" class="com.amazonaws.services.s3.AmazonS3Client">
+		<constructor-arg>
+			<bean class="com.amazonaws.auth.BasicAWSCredentials">
+				<constructor-arg name="accessKey" value="AKIAIGHOC2QKWSYA5M2A"/>
+				<constructor-arg name="secretKey" value="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"/>
+			</bean>
+		</constructor-arg>
+	</bean>
+	
 </beans>

@@ -7,8 +7,8 @@ public class MainApp {
 
 	public static void main(String[] args) {
 		
-		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext-camel.xml");
-		ctx.start();
+		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext-camel.xml");
+		applicationContext.start();
 		System.out.println("Application context started");
 		try {
 			Thread.sleep(5 * 60 * 1000);
@@ -16,8 +16,8 @@ public class MainApp {
 			e.printStackTrace();
 		}
 		
-		ctx.stop();
-		ctx.close();
+		applicationContext.stop();
+		applicationContext.close();
 		System.out.println("Application context stopped...");
 	}
 }

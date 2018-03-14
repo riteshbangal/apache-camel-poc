@@ -19,14 +19,6 @@
 
 	<dependencies>
 
-		<!-- CDI API -->
-		<dependency>
-			<groupId>javax.enterprise</groupId>
-			<artifactId>cdi-api</artifactId>
-			<version>${cdi-api-1.2-version}</version>
-			<scope>provided</scope>
-		</dependency>
-		
 		<!-- Camel -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
@@ -35,26 +27,40 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-spring</artifactId>
+			<version>${camel-version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-aws</artifactId>
 			<version>${camel-version}</version>
 		</dependency>
-		<dependency>
-      		<groupId>org.apache.camel</groupId>
-      		<artifactId>camel-cdi</artifactId>
-      		<version>${camel-version}</version>
-    	</dependency>
-		<dependency>
-		    <groupId>com.amazonaws</groupId>
-		    <artifactId>aws-java-sdk-core</artifactId>
-		    <version>1.11.269</version>
-		</dependency>
-		<dependency>
-		    <groupId>com.amazonaws</groupId>
-		    <artifactId>aws-java-sdk</artifactId>
-		    <version>1.11.269</version>
-		</dependency>
-				
-		    	
     	
 	</dependencies>
+	
+	<build>
+	
+      	<plugins>
+            
+            <plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>com.poc.camel.aws.main.MainApp</mainClass>
+				</configuration>
+			</plugin>
+			
+      	</plugins>
+      	
+  	</build>
+	
 </project>
