@@ -19,6 +19,7 @@
 		<module>camel-email-poc</module>
 		<module>camel-rest-consumer</module>
 		<module>camel-xslt</module>
+		<module>camel-aws-s3</module>
 		
 		<module>camel-jaxrs</module>
 	</modules>
