@@ -1,3 +1,16 @@
 # To run this maven project from command prompt.
+mvn compile
 mvn clean package/install
 mvn exec:java
+
+
+# Install Maven with Yum on Amazon Linux
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+sudo yum install -y apache-maven
+mvn --version
+
+# AmazonWS Guide: Setup Apache Maven on AWS-EC2 Instance 
+Reference: https://www.youtube.com/watch?v=SDuZMchh6g0
+
+

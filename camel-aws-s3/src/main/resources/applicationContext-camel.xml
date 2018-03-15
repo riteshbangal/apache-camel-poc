@@ -1,5 +1,6 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camel="http://camel.apache.org/schema/spring"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:camel="http://camel.apache.org/schema/spring"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 		http://www.springframework.org/schema/beans/spring-beans.xsd          
 		http://camel.apache.org/schema/spring 
@@ -13,14 +14,7 @@
 		<routeBuilder ref="awsS3RouteBuilder" />
 	</camelContext>
 	
-	<!-- set up default amazon s3 client from amazon aws sdk -->
-	<bean id="s3Client" class="com.amazonaws.services.s3.AmazonS3Client">
-		<!-- <constructor-arg>
-			<bean class="com.amazonaws.auth.BasicAWSCredentials">
-				<constructor-arg name="accessKey" value=""/>
-				<constructor-arg name="secretKey" value=""/>
-			</bean>
-		</constructor-arg> -->
-	</bean>
-	
+	<!-- set up default amazon s3 client from amazon aws sdk. -->
+	<bean id="s3Client" class="com.amazonaws.services.s3.AmazonS3Client" />
+
 </beans>
